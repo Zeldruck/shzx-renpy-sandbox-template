@@ -1,8 +1,10 @@
 label after_load:
     call load_all_characters
     call load_all_quests
+    call load_all_locations
 
     return
+
 
 label load_all_characters:
     if jade == None:
@@ -48,5 +50,13 @@ label load_all_quests:
 
     if not lisaQ1.isCompleted and not (lisaQ1 in lisa.actualQuests):
         $ lisa.AddNewActualQuest(lisaQ1)
+
+    return
+
+label load_all_locations:
+    if L_map1 == None:
+        $ L_map1 = Location("map1")
+    if L_map2 == None:
+        $ L_map2 = Location("map2")
 
     return

@@ -56,6 +56,7 @@ screen Sinventory:
 
             action [Hide("Sinventory"), Show("Sui")]
 
+
     grid 5 int(math.ceil(len(inventory.items) / 5.0)):
         xspacing 0
         yspacing 50
