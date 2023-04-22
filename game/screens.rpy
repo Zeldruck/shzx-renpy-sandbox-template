@@ -887,7 +887,7 @@ screen history():
     predict False
 
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
-
+    
         style_prefix "history"
 
         for h in _history_list:

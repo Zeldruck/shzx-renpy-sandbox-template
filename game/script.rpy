@@ -1,7 +1,23 @@
-﻿label initialization:
+﻿label start:
+    #Initialize the whole game's datas
+    call initialization
+
+    # Top bar ui informations
+    show screen Sui
+
+    # Start from the main map
+    jump map
+
+    return
+
+
+label initialization:
+
+    # Create the inventory & the day and time system
     $ inventory = Inventory()
     $ daytime = Daytime()
 
+    # Add few items
     $ inventory.AddItem(item1, 1)
     $ inventory.AddItem(item2, 3)
 
@@ -12,18 +28,18 @@
     call load_all_quests
 
     ### Locations
-    $ L_map1 = Location("map1")
-    $ L_map2 = Location("map2")
+    call load_all_locations
 
-    ### Locations Unlock
+    ### Locations Unlock during start
     $ L_map1.SetUnlockStatus(True)
     
-    ### Locations Characters
+    ### Locations Characters during start
     $ L_map1.AddCharacterOnMap(lisa, "lisa default", Vector2(0, 0))
     $ L_map2.AddCharacterOnMap(jade, "jade default", Vector2(1, 0))
     
     return
 
+### Top bar ui
 screen Sui:
     #textbutton str(daytime.GetDaytimeName()) action Function(daytime.PassTime()) text_color "#000000"
         
@@ -34,20 +50,13 @@ screen Sui:
 
             action [Hide("Sui"), Show("Sinventory")]
 
-label start:
-    call initialization
-
-    show screen Sui
-
-    jump map
-
-    return
-
+# Main map
 label map:
     scene None
 
     call screen Smap
 
+# Main map screen
 screen Smap:
     add "bg plain" xalign 0.5 yalign 0.5
     
