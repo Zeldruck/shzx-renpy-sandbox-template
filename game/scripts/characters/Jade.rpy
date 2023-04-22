@@ -1,3 +1,11 @@
+label jade_choices:
+    #Set outfit and bg with location
+    show jade default
+    with dissolve
+
+    call screen choices(jade.GetChoices())
+
+
 label jade_quest1:
 
     "This is jade quest1"
@@ -12,9 +20,10 @@ label jade_quest1:
 
     jump map
 
+
 label jade_quest2:
     if inventory.HasItem(item1, 2):
-        $ inventory.RemoveItem(item1, 2,)
+        $ inventory.RemoveItem(item1, 2)
 
         jade.c "Thank you for the 2 [item1.name]"
 
@@ -29,6 +38,7 @@ label jade_quest2:
 
     jump map
 
+
 label jade_for_lisa_quest1:
 
     "This is jade for lisa quest1"
@@ -41,12 +51,6 @@ label jade_for_lisa_quest1:
 
     jump map
 
-label jade_choices:
-    #Set outfit and bg with location
-    show jade default
-    with dissolve
-
-    call screen choices(jade.GetChoices())
 
 label jade_casualTalk:
 
@@ -59,6 +63,7 @@ label jade_casualTalk:
     jump map
 
     return
+
 
 label jade_nothing:
 

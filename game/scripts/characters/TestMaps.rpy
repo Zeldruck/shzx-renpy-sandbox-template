@@ -7,6 +7,7 @@ label map1:
 
     call screen Smap1
 
+
 screen Smap1:
     # Show bg in function of the time TODO
 
@@ -32,6 +33,7 @@ label map2:
     "This is map 2 & try events on going on this map #TODO"
 
     call screen Smap2
+    
 
 screen Smap2:
     # Show bg in function of the time TODO

@@ -4,6 +4,7 @@ label lisa_choices:
 
     call screen choices(lisa.GetChoices())
 
+
 label lisa_quest1:
 
     "This is lisa quest1"
@@ -16,6 +17,7 @@ label lisa_quest1:
     hide lisa default
 
     jump map
+
 
 label lisa_quest2:
 
@@ -46,6 +48,7 @@ label lisa_casualTalk:
     hide lisa default
 
     jump map
+    
 
 label lisa_nothing:
 
