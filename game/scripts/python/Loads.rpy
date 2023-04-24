@@ -54,9 +54,7 @@ label load_all_quests:
     return
 
 label load_all_locations:
-    if L_map1 == None:
-        $ L_map1 = Location("map1")
-    if L_map2 == None:
-        $ L_map2 = Location("map2")
+    $ L_map1 = Location("map1")
+    $ L_map2 = Location("map2")
 
     return
