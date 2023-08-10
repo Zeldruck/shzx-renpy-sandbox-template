@@ -43,6 +43,13 @@ label initialization:
 screen Sui:
     #textbutton str(daytime.GetDaytimeName()) action Function(daytime.PassTime()) text_color "#000000"
         
+    hbox xalign 0.75 yalign 0.0:
+        imagebutton:
+            idle "exc"
+            hover "exc"
+
+            action [Hide("Sui"), Show(phone.phoneHomeScreen)]
+
     hbox xalign 1.0 yalign 0.0:
         imagebutton:
             idle "exc"

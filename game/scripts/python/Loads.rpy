@@ -53,8 +53,15 @@ label load_all_quests:
 
     return
 
+
 label load_all_locations:
     $ L_map1 = Location("map1")
     $ L_map2 = Location("map2")
+
+
+label load_phone:
+    $ phone = Phone("PhoneMainScreen")
+
+    $ app_settings = App("Settings", "inv", "app_settings_screen")
 
     return
